@@ -4,7 +4,7 @@ defmodule InmanaWeb.FallbackController do
 
   alias InmanaWeb.ErrorView
 
-  def call(conn, {:errpr, %{result: result, status: status}}) do
+  def call(conn, {:error, %{result: result, status: status}}) do
     conn
     |>put_status(status)
     |>put_view(ErrorView)
