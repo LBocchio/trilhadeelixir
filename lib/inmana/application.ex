@@ -17,7 +17,7 @@ defmodule Inmana.Application do
       InmanaWeb.Endpoint,
       # Start a worker by calling: Inmana.Worker.start_link(arg)
       # {Inmana.Worker, arg}
-      Inmana.Supplies.Scheculer
+       Inmana.Supplies.Scheculer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

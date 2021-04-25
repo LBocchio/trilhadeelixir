@@ -4,6 +4,7 @@ defmodule Inmana.Supply do
   import Ecto.Changeset
 
   alias Inmana.Restaurant
+  alias Inmana.Stock
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
@@ -20,6 +21,8 @@ defmodule Inmana.Supply do
 
     belongs_to :restaurant, Restaurant
 
+    has_many :stocks, Stock, foreign_key: :supplies_id, references: :id
+
     timestamps()
   end
 
@@ -32,4 +35,5 @@ defmodule Inmana.Supply do
 
 
   end
+
 end

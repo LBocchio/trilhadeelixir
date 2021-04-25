@@ -7,6 +7,8 @@ defmodule Inmana.Repo.Migrations.Stock do
       add :unid_qtd, :integer
 
       add :supplies_id, references(:supplies, type: :binary_id)
+
+      timestamps()
     end
 
 
