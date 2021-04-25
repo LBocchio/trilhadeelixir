@@ -17,7 +17,7 @@ defmodule Inmana.Stock do
     field :unid_mes, :string
     field :unid_qtd, :integer
 
-    belongs_to :supplies, Supply
+    belongs_to :supply, Supply
 
 
 

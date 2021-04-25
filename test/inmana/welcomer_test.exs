@@ -1,6 +1,6 @@
 defmodule Inmana.WelcomerTest do
 
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   alias Inmana.Welcomer
 
@@ -8,7 +8,7 @@ defmodule Inmana.WelcomerTest do
 
     test "when the user is special, returns a special message" do
       params = %{"name" => "banana", "age" => "42"}
-      expected_result = {:ok, "when the user is special, retorns a special message"}
+      expected_result =  {:ok, "You are very special banana"}
 
       result = Welcomer.welcome(params)
 
@@ -17,7 +17,7 @@ defmodule Inmana.WelcomerTest do
 
     test "when the user is not special, returns a message" do
       params = %{"name" => "rafael", "age" => "25"}
-      expected_result = {:ok, "Welcome, Rafael"}
+      expected_result = {:ok, "Welcome rafael"}
 
       result = Welcomer.welcome(params)
 

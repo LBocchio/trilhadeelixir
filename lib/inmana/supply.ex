@@ -21,7 +21,7 @@ defmodule Inmana.Supply do
 
     belongs_to :restaurant, Restaurant
 
-    has_many :stocks, Stock, foreign_key: :supplies_id, references: :id
+    has_many :stocks, Stock
 
     timestamps()
   end
