@@ -8,7 +8,7 @@ defmodule Inmana.Stock do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
 
-  @required_params [:unid_mes, :unid_qtd, :supply_id]
+  @required_params [:unid_mes, :unid_qtd, :supplies_id]
 
   @derive {Jason.Encoder, only: @required_params ++ [:id]}
 
@@ -17,7 +17,7 @@ defmodule Inmana.Stock do
     field :unid_mes, :string
     field :unid_qtd, :integer
 
-    belongs_to :supply, Supply
+    belongs_to :supplies, Supply
 
 
 

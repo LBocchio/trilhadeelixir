@@ -5,11 +5,9 @@ defmodule Inmana.Repo.Migrations.Stock do
     create table(:stock) do
       add :unid_mes, :string
       add :unid_qtd, :integer
-      add :supply_id, references(:supply, type: :binary_id)
+      add :supplies_id, references(:supplies, type: :binary_id)
 
       timestamps()
     end
-
-
   end
 end
